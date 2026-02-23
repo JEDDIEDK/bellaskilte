@@ -35,7 +35,10 @@ export const servicePages: ServicePage[] = [
     summary: "Facadeskilte hos BELLA SKILTE & PRINT A/S i Herlev.",
     body: [
       "Vi leverer facadeskilte, logoer og profilskilte til virksomheder, butikker og institutioner.",
-      "Løsningen tilpasses bygning, afstand og ønsket synlighed, så udtrykket er både professionelt og holdbart."
+      "Løsningen tilpasses bygning, afstand og ønsket synlighed, så udtrykket er både professionelt og holdbart.",
+      "Vi rådgiver om materialer, lys, montering og placering, så dit facadeskilt fungerer i praksis hele året.",
+      "Facadeskilte produceres i høj kvalitet med fokus på læsbarhed, visuel identitet og lang levetid.",
+      "Uanset om du har brug for et enkelt butiksskilt eller en komplet facadeopgradering, hjælper vi fra idé til færdig montage."
     ],
     cta: "Få et tilbud på facadeskilte"
   },
@@ -46,7 +49,10 @@ export const servicePages: ServicePage[] = [
     summary: "Indendørsskiltning hos BELLA SKILTE & PRINT A/S i Herlev.",
     body: [
       "Indendørsskilte til wayfinding, information og branding i kontorer, butikker og fællesarealer.",
-      "Vi hjælper med design, materialevalg og montering, så skiltningen fungerer i praksis."
+      "Vi hjælper med design, materialevalg og montering, så skiltningen fungerer i praksis.",
+      "Indendørsskiltning kan bruges til reception, mødelokaler, afdelinger, sikkerhedsinformation og kundeguide.",
+      "Vi sikrer ensartet visuel stil, så skiltene understøtter jeres brand og gør hverdagen nemmere for både kunder og medarbejdere.",
+      "Fra små navneskilte til komplette skiltekoncepter leverer vi løsninger, der skaber overblik og professionalisme."
     ],
     cta: "Få rådgivning om indendørsskilte"
   },
@@ -57,7 +63,10 @@ export const servicePages: ServicePage[] = [
     summary: "Udendørsskilte hos BELLA SKILTE & PRINT A/S i Herlev.",
     body: [
       "Robuste udendørsskilte der holder til vind, vejr og daglig eksponering.",
-      "Vi producerer skilte med fokus på læsbarhed, synlighed og levetid."
+      "Vi producerer skilte med fokus på læsbarhed, synlighed og levetid.",
+      "Udendørsskiltning kræver korrekt materialevalg, overfladebehandling og montering for at holde sig flot over tid.",
+      "Vi rådgiver om størrelse, kontrast og placering, så budskabet kan ses tydeligt fra den rigtige afstand.",
+      "Løsningen tilpasses både bygning, omgivelser og formål, så dit udendørsskilt giver maksimal værdi."
     ],
     cta: "Få pris på udendørsskilte"
   },
@@ -68,7 +77,10 @@ export const servicePages: ServicePage[] = [
     summary: "Montering af skilte for optimal synlighed og effekt.",
     body: [
       "Montering af skilte, hvilket sikrer korrekt installation og placering af skiltene for optimal synlighed og effekt.",
-      "Vi planlægger montage sikkert og effektivt, så driften påvirkes mindst muligt."
+      "Vi planlægger montage sikkert og effektivt, så driften påvirkes mindst muligt.",
+      "Vores montageteam arbejder struktureret med opmåling, forberedelse og afslutning, så resultatet står skarpt fra dag ét.",
+      "Vi håndterer både enkeltopgaver og større montageforløb på tværs af flere lokationer.",
+      "Når skilte monteres korrekt, får du både bedre holdbarhed, bedre synlighed og et mere professionelt helhedsindtryk."
     ],
     cta: "Book montage af skilte"
   },
@@ -79,7 +91,10 @@ export const servicePages: ServicePage[] = [
     summary: "Folietekster og folieløsninger hos BELLA SKILTE & PRINT A/S i Herlev.",
     body: [
       "Folieklæbere til vinduer, vægge, gulve og andre overflader med fokus på stærk visuel identitet.",
-      "Egnet til kampagner, dekoration og permanent branding."
+      "Egnet til kampagner, dekoration og permanent branding.",
+      "Vi producerer folieløsninger i høj printkvalitet med farver, der matcher jeres grafiske profil.",
+      "Folieklæbere er en fleksibel måde at skabe synlighed i butik, kontor, showroom eller på messer.",
+      "Du kan få både midlertidige kampagnefolier og permanente løsninger med professionel montering."
     ],
     cta: "Få tilbud på folieklæbere"
   },
@@ -90,7 +105,10 @@ export const servicePages: ServicePage[] = [
     summary: "Bannere hos BELLA SKILTE & PRINT A/S i Herlev.",
     body: [
       "Storformat bannere til facader, events, stilladser og kampagner.",
-      "Vi rådgiver om materialer, ophæng og finish, så banneret passer til formålet."
+      "Vi rådgiver om materialer, ophæng og finish, så banneret passer til formålet.",
+      "Et banner er en effektiv løsning, når du vil kommunikere hurtigt og tydeligt i stort format.",
+      "Vi tilbyder bannerløsninger til både indendørs og udendørs brug med fokus på holdbarhed og skarp printkvalitet.",
+      "Uanset om du skal bruge ét banner eller en serie, leverer vi en løsning, der er klar til montering."
     ],
     cta: "Bestil bannere"
   },
@@ -101,7 +119,10 @@ export const servicePages: ServicePage[] = [
     summary: "Displays hos BELLA SKILTE & PRINT A/S i Herlev.",
     body: [
       "Displays til butiks- og messeløsninger, der løfter produktpræsentation og budskab.",
-      "Fra enkeltstående standere til komplette displaymiljøer."
+      "Fra enkeltstående standere til komplette displaymiljøer.",
+      "Et godt display skaber opmærksomhed og hjælper kunder med at forstå produktets værdi med det samme.",
+      "Vi designer og producerer displays, der passer til både kampagner, sæsonvarer og faste præsentationer.",
+      "Løsningen tilpasses format, materiale og placering, så den fungerer optimalt i dit salgsmiljø."
     ],
     cta: "Hør om displays"
   },
@@ -112,7 +133,10 @@ export const servicePages: ServicePage[] = [
     summary: "Posters hos BELLA SKILTE & PRINT A/S i Herlev.",
     body: [
       "4-farve print af div. storformat posters på pænt posterpapir, PP eller folie.",
-      "Ideelt til kampagner, butiksvinduer og intern kommunikation."
+      "Ideelt til kampagner, butiksvinduer og intern kommunikation.",
+      "Posters er en enkel og effektiv løsning til både kortvarige kampagner og længerevarende visuelle budskaber.",
+      "Vi hjælper med korrekt format, papirtype og finish, så posterløsningen matcher dit formål og dit budget.",
+      "Fra enkle informationsposters til stærke kampagnevisuals leverer vi skarpt print med hurtig levering."
     ],
     cta: "Bestil storformat posters"
   },
@@ -123,7 +147,10 @@ export const servicePages: ServicePage[] = [
     summary: "Folieindpakning og bilreklame udføres i Herlev.",
     body: [
       "Bilreklame og folieindpakning der gør firmabilen til en stærk, mobil reklameflade.",
-      "Vi tilpasser designet til jeres visuelle identitet og køretøjstype."
+      "Vi tilpasser designet til jeres visuelle identitet og køretøjstype.",
+      "Bilindpakning giver høj synlighed i lokalområdet og gør hver køretur til en aktiv del af jeres markedsføring.",
+      "Vi producerer og monterer folie med fokus på holdbarhed, præcision og et professionelt slutresultat.",
+      "Uanset om du ønsker delvis eller fuld indpakning, får du en løsning der passer til både brand og budget."
     ],
     cta: "Få tilbud på bilreklame"
   },
@@ -134,7 +161,10 @@ export const servicePages: ServicePage[] = [
     summary: "Montering af folie og skilte for korrekt placering.",
     body: [
       "Montering af folie og skilte, hvilket sikrer korrekt installation og placering af folierne og skiltene for optimal synlighed og effekt.",
-      "Vi leverer en samlet løsning fra produktion til færdig montage."
+      "Vi leverer en samlet løsning fra produktion til færdig montage.",
+      "Professionel montage er afgørende for både udtryk, holdbarhed og funktion i den daglige brug.",
+      "Vi planlægger opgaven effektivt, så installationen gennemføres sikkert og med mindst mulig forstyrrelse.",
+      "Med én samlet leverandør får du bedre koordinering, hurtigere levering og et stærkere slutresultat."
     ],
     cta: "Book montage"
   }
