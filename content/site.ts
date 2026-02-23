@@ -173,13 +173,12 @@ export const heroSliderImages = [
 ];
 
 export const frontGallery = [
-  ...Array.from({ length: 8 }, (_, index) => `/images/services/facadeskilte/${String(index + 1).padStart(2, "0")}.jpg?v=20260223d`),
-  ...Array.from({ length: 8 }, (_, index) => `/images/services/folieklaebere/${String(index + 1).padStart(2, "0")}.jpg?v=20260223d`),
-  ...Array.from({ length: 4 }, (_, index) => `/images/services/folieindpakning-af-bil--bilreklame/${String(index + 1).padStart(2, "0")}.jpg?v=20260223d`),
-  ...Array.from({ length: 4 }, (_, index) => `/images/services/bannere/${String(index + 1).padStart(2, "0")}.jpg?v=20260223d`)
+  ...Array.from({ length: 8 }, (_, index) => `/images/services/facadeskilte/${String(index + 1).padStart(2, "0")}.jpg`),
+  ...Array.from({ length: 8 }, (_, index) => `/images/services/folieklaebere/${String(index + 1).padStart(2, "0")}.jpg`),
+  ...Array.from({ length: 4 }, (_, index) => `/images/services/folieindpakning-af-bil--bilreklame/${String(index + 1).padStart(2, "0")}.jpg`),
+  ...Array.from({ length: 4 }, (_, index) => `/images/services/bannere/${String(index + 1).padStart(2, "0")}.jpg`)
 ];
 
-const serviceGalleryVersion = "20260223c";
 const serviceGalleryCounts: Record<string, number> = {
   facadeskilte: 16,
   indendoersskilte: 3,
@@ -194,7 +193,7 @@ const serviceGalleryCounts: Record<string, number> = {
 };
 
 const serviceGalleryPaths = (slug: string, count: number) =>
-  Array.from({ length: count }, (_, index) => `/images/services/${slug}/${String(index + 1).padStart(2, "0")}.jpg?v=${serviceGalleryVersion}`);
+  Array.from({ length: count }, (_, index) => `/images/services/${slug}/${String(index + 1).padStart(2, "0")}.jpg`);
 
 export const serviceGalleries: Record<string, string[]> = Object.fromEntries(
   Object.entries(serviceGalleryCounts).map(([slug, count]) => [slug, serviceGalleryPaths(slug, count)])
