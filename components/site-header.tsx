@@ -38,14 +38,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 overflow-visible border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-28 w-[min(1120px,92vw)] items-center justify-between md:h-32">
+      <div className="mx-auto flex h-28 w-[min(1200px,92vw)] items-center justify-between md:h-32">
         <Link className="relative flex items-center gap-3 text-lg font-black tracking-tight text-ink" href="/">
           <Image
             src={encodeURI(bellaLogo)}
             alt="Bella Skilte logo"
             width={480}
             height={168}
-            className="relative z-10 h-[195px] w-auto object-contain translate-y-2 sm:h-[229px] sm:translate-y-4 md:h-[257px] md:translate-y-8"
+            className="relative z-10 h-[166px] w-auto object-contain translate-y-2 sm:h-[195px] sm:translate-y-4 md:h-[218px] md:translate-y-8"
           />
         </Link>
         <button className="rounded-lg border p-2 lg:hidden" onClick={() => setOpen((v) => !v)} aria-label="Menu">
@@ -155,7 +155,7 @@ export function SiteHeader() {
       </div>
       {open ? (
         <nav className="border-t border-slate-200 bg-white lg:hidden">
-          <div className="mx-auto grid w-[min(1120px,92vw)] gap-2 py-3">
+          <div className="mx-auto grid w-[min(1200px,92vw)] gap-2 py-3">
             {navigation.map((item) =>
               item.label === "Ydelser" ? (
                 <div key={item.href} className="rounded-lg border border-slate-200">
