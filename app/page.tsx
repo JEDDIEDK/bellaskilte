@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -32,7 +31,6 @@ export default function HomePage() {
       <section className="bg-[#2f3136]">
         <div className="mx-auto w-[min(1200px,92vw)] py-14 lg:py-20">
           <div className="mb-6 max-w-[860px]">
-            <Badge>Siden 1965</Badge>
             <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
               BellaSkilte & Print.......
               <span className="mt-2 block">- Vi løfter din synlighed</span>
