@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="mx-auto w-[min(1120px,92vw)] py-16">
-      <h1 className="text-4xl font-black">Kontakt</h1>
+      <h1 className="mt-8 text-4xl font-black md:mt-10">Kontakt</h1>
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1fr]">
         <div className="space-y-4 rounded-2xl border bg-white p-6 text-slate-700">
           <p className="text-lg font-bold text-ink">{company.name}</p>
