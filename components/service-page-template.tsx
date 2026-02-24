@@ -9,7 +9,7 @@ export function ServicePageTemplate({ page }: { page: ServicePage }) {
   const gallery = serviceGalleries[page.slug] ?? [];
   const hasSlider = gallery.length >= 2;
   return (
-    <main className="mx-auto w-[min(1120px,92vw)] py-16">
+    <main className="mx-auto w-[min(1120px,92vw)] pb-16 pt-24 md:pt-28">
       <h1 className="text-4xl font-black text-ink">{page.title}</h1>
       <p className="mt-4 max-w-3xl text-lg text-slate-700">{page.summary}</p>
       {hasSlider ? (

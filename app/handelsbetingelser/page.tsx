@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="mx-auto w-[min(1120px,92vw)] py-16">
+    <main className="mx-auto w-[min(1120px,92vw)] pb-16 pt-24 md:pt-28">
       <h1 className="text-4xl font-black">Handelsbetingelser</h1>
       <div className="mt-6 space-y-4 rounded-2xl border bg-white p-6 text-slate-700">
         <p>Alle tilbud og ordrer hos {company.name} er underlagt gældende dansk lovgivning og de aftalte leveringsvilkår.</p>
