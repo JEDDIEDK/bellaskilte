@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties, ComponentType } from "react";
-import { useState } from "react";
-import { Car, ChevronDown, Facebook, Flag, ImageIcon, LayoutPanelLeft, Menu, Monitor, Package, PanelsTopLeft, Sticker, Store, X } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { Car, ChevronDown, Facebook, Flag, ImageIcon, LayoutPanelLeft, Menu, Monitor, Package, PanelsTopLeft, Search, Sticker, Store, X } from "lucide-react";
 import { bellaLogo, company, navigation, servicePages } from "@/content/site";
 
 export function SiteHeader() {
@@ -12,8 +12,36 @@ export function SiteHeader() {
   const [ydelserOpen, setYdelserOpen] = useState(false);
   const [mobileYdelserOpen, setMobileYdelserOpen] = useState(false);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const skilte = servicePages.filter((item) => item.section === "skilte");
   const reklame = servicePages.filter((item) => item.section === "reklame");
+  const searchItems = useMemo(
+    () => [
+      { title: "Forside", href: "/" },
+      { title: "Ydelser", href: "/#ydelser" },
+      { title: "Om os", href: "/om-bella-skilte-print-a-s" },
+      { title: "Kontakt", href: "/kontakt" },
+      { title: "Privatlivspolitik", href: "/privatlivspolitik" },
+      { title: "Cookiepolitik", href: "/cookiepolitik" },
+      { title: "Handelsbetingelser", href: "/handelsbetingelser" },
+      ...servicePages.map((service) => ({ title: service.title, href: `/${service.section}/${service.slug}` }))
+    ],
+    []
+  );
+  const filteredSearchItems = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return searchItems.slice(0, 8);
+    return searchItems.filter((item) => item.title.toLowerCase().includes(query)).slice(0, 10);
+  }, [searchItems, searchQuery]);
+  useEffect(() => {
+    if (!searchOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSearchOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [searchOpen]);
   const serviceStyle: Record<
     string,
     {
@@ -52,6 +80,14 @@ export function SiteHeader() {
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
         <nav className="hidden items-center gap-6 lg:flex">
+          <button
+            type="button"
+            onClick={() => setSearchOpen(true)}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink"
+            aria-label="Søg"
+          >
+            <Search size={16} />
+          </button>
           {navigation.map((item) =>
             item.label === "Ydelser" ? (
               <div
@@ -156,9 +192,66 @@ export function SiteHeader() {
           </span>
         </nav>
       </div>
+      {searchOpen ? (
+        <div className="fixed inset-0 z-[70] flex items-start justify-center bg-slate-950/50 p-4 pt-24" onClick={() => setSearchOpen(false)}>
+          <div
+            className="w-full max-w-2xl rounded-2xl border border-slate-200 bg-white shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center gap-3 border-b border-slate-200 px-4 py-3">
+              <Search size={18} className="text-slate-500" />
+              <input
+                autoFocus
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Søg efter side eller ydelse..."
+                className="w-full bg-transparent text-sm font-medium text-slate-800 outline-none placeholder:text-slate-400"
+              />
+              <button
+                type="button"
+                onClick={() => setSearchOpen(false)}
+                className="rounded-md p-1 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-700"
+                aria-label="Luk søgning"
+              >
+                <X size={16} />
+              </button>
+            </div>
+            <div className="max-h-[50vh] overflow-auto p-2">
+              {filteredSearchItems.length ? (
+                filteredSearchItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => {
+                      setSearchOpen(false);
+                      setSearchQuery("");
+                    }}
+                    className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-ink"
+                  >
+                    {item.title}
+                  </Link>
+                ))
+              ) : (
+                <p className="px-3 py-6 text-sm text-slate-500">Ingen resultater.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      ) : null}
       {open ? (
         <nav className="border-t border-slate-200 bg-white lg:hidden">
           <div className="mx-auto grid w-[min(1200px,92vw)] gap-2 py-3">
+            <button
+              type="button"
+              onClick={() => {
+                setSearchOpen(true);
+                setOpen(false);
+              }}
+              className="inline-flex items-center gap-2 py-2 font-semibold text-slate-700"
+            >
+              <Search size={16} />
+              Søg
+            </button>
             {navigation.map((item) =>
               item.label === "Ydelser" ? (
                 <div key={item.href} className="rounded-lg border border-slate-200">
