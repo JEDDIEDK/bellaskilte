@@ -151,6 +151,9 @@ export function SiteHeader() {
           >
             <Facebook size={16} />
           </a>
+          <span className="rounded-full border border-coral/40 bg-coral/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-coral">
+            Siden 1965
+          </span>
         </nav>
       </div>
       {open ? (
