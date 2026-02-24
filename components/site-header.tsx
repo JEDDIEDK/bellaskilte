@@ -45,7 +45,7 @@ export function SiteHeader() {
             alt="Bella Skilte logo"
             width={480}
             height={168}
-            className="relative z-10 h-[150px] w-auto object-contain translate-y-2 sm:h-[176px] sm:translate-y-4 md:h-[198px] md:translate-y-8"
+            className="relative z-10 h-[195px] w-auto object-contain translate-y-2 sm:h-[229px] sm:translate-y-4 md:h-[257px] md:translate-y-8"
           />
         </Link>
         <button className="rounded-lg border p-2 lg:hidden" onClick={() => setOpen((v) => !v)} aria-label="Menu">
