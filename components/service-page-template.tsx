@@ -10,8 +10,7 @@ export function ServicePageTemplate({ page }: { page: ServicePage }) {
   const hasSlider = gallery.length >= 2;
   return (
     <main className="mx-auto w-[min(1120px,92vw)] py-16">
-      <p className="text-sm font-bold uppercase tracking-wide text-coral">{page.section}</p>
-      <h1 className="mt-2 text-4xl font-black text-ink">{page.title}</h1>
+      <h1 className="text-4xl font-black text-ink">{page.title}</h1>
       <p className="mt-4 max-w-3xl text-lg text-slate-700">{page.summary}</p>
       {hasSlider ? (
         <div className="mt-8">
